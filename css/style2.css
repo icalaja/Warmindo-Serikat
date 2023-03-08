@@ -1,0 +1,206 @@
+:root {
+  --primary: #29cdf2;
+  --primary2: rgb(217, 37, 52);
+  --primary3: #f2e527;
+  --primary4: #4ea64b;
+  --bg: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: fonts1;
+  src: url(../asset/fonts/com4t-famie-black.ttf);
+}
+@font-face {
+  font-family: fonts2;
+  src: url(../asset/fonts/inky-black.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'fonts1', sans-serif;
+  background-color: black;
+  color: #fff;
+}
+
+.menu {
+  padding: 8rem 7% 1.4rem;
+}
+
+.menu h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.menu h2 span {
+  color: var(--primary);
+}
+
+.menu h2 {
+  margin-bottom: 1rem;
+}
+
+.menu p span {
+  color: var(--primary);
+}
+
+.menu p {
+  color: var(--primary3);
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+
+.menu .relasi {
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.judul {
+  padding-top: 3rem;
+}
+
+.menu-lain {
+  font-size: 1.4rem;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  margin: 0 1rem;
+  padding: 0.5rem 2rem;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+  line-height: 2.2rem;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.menu .row .menu-card {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.menu .row .menu-card img {
+  height: 17rem;
+  width: 17rem;
+  padding: 1rem;
+}
+
+.menu .row .menu-card .menu-card-tittle {
+  margin-top: 1rem auto 0.5rem;
+  text-transform: capitalize;
+}
+
+/* media queries */
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: rgba(217, 37, 52, 0.8);
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .about .row .content p {
+    font-size: 1.6rem;
+  }
+
+  .menu p {
+    font-size: 1.3rem;
+  }
+
+  .kontak .row {
+    flex-wrap: wrap;
+  }
+
+  .kontak .row .map {
+    height: 30rem;
+  }
+
+  .kontak .row form {
+    padding-top: 0%;
+  }
+}
+
+/* mobile phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
